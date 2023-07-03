@@ -1,0 +1,67 @@
+[
+	{
+		"@id" : "https://w3id.org/semanticarts/ontology/gistValidationAnnotations",
+		"@type" : "owl:Ontology",
+		"owl:imports" : { "@id" : "https://w3id.org/semanticarts/ontology/gistCore" },
+		"skos:definition" : {
+			"@type" : "xsd:string",
+			"@value" : "Annotations to assist gist ontology validation."
+		},
+		"skos:prefLabel" : {
+			"@type" : "xsd:string",
+			"@value" : "gist Validation Annotations"
+		},
+		"gist:license" : {
+			"@type" : "xsd:string",
+			"@value" : "https://creativecommons.org/licenses/by-sa/3.0/"
+		},
+		"@context" : {
+			
+			"gist" : "https://w3id.org/semanticarts/ns/ontology/gist/",
+			"rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+			"owl" : "http://www.w3.org/2002/07/owl#",
+			"skos" : "http://www.w3.org/2004/02/skos/core#"
+		}
+	},
+	{
+		"@id" : "gist:nonConformingLabel",
+		"@type" : "owl:AnnotationProperty",
+		"rdfs:domain" : {
+			"@type" : "owl:Class",
+			"owl:unionOf" : {
+				"@list" : [
+					{ "@id" : "owl:Class" },
+					{ "@id" : "owl:DatatypeProperty" },
+					{ "@id" : "owl:ObjectProperty" }
+				]}
+		},
+		"rdfs:isDefinedBy" : { "@id" : "https://w3id.org/semanticarts/ontology/gistValidationAnnotations" },
+		"rdfs:range" : { "@id" : "xsd:boolean" },
+		"skos:definition" : {
+			"@type" : "xsd:string",
+			"@value" : "Indicates that the annotated ontology entity is exempt from label validation rules."
+		},
+		"skos:prefLabel" : {
+			"@type" : "xsd:string",
+			"@value" : "non-conforming label"
+		},
+		"@context" : {
+			"gist" : "https://w3id.org/semanticarts/ns/ontology/gist/",
+			"rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+			"owl" : "http://www.w3.org/2002/07/owl#",
+			"xsd" : "http://www.w3.org/2001/XMLSchema#",
+			"skos" : "http://www.w3.org/2004/02/skos/core#",
+			"rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
+		}
+	},
+	{
+		"@id" : "gist:unitSymbolUnicode",
+		"gist:nonConformingLabel" : {
+			"@type" : "xsd:boolean",
+			"@value" : "true"
+		},
+		"@context" : {
+			"gist" : "https://w3id.org/semanticarts/ns/ontology/gist/"
+		}
+	}
+]
